@@ -1135,7 +1135,7 @@ class Matrix
             for ($i = 0; $i < $this->m; ++$i) {
                 for ($j = 0; $j < $this->n; ++$j) {
                     // @phpstan-ignore-next-line
-                    $this->A[$i][$j] = trim($this->A[$i][$j], '"') . trim($M->get($i, $j), '"');
+                    $this->A[$i][$j] = trim($this->A[$i][$j] ?? '', '"') . trim($M->get($i, $j) ?? '', '"');
                 }
             }
 
