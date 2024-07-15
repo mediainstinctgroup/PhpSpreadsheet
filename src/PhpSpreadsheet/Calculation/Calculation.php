@@ -3626,9 +3626,9 @@ class Calculation
         $cellValue = null;
 
         //  Quote-Prefixed cell values cannot be formulae, but are treated as strings
-        if ($cell !== null && $ignoreQuotePrefix === false && $cell->getStyle()->getQuotePrefix() === true) {
-            return self::wrapResult((string) $formula);
-        }
+//        if ($cell !== null && $ignoreQuotePrefix === false && $cell->getStyle()->getQuotePrefix() === true) {
+//            return self::wrapResult((string) $formula);
+//        }
 
         if (preg_match('/^=\s*cmd\s*\|/miu', $formula) !== 0) {
             return self::wrapResult($formula);
